@@ -1,0 +1,394 @@
+/* --- Variables CSS para fácil mantenimiento --- */
+:root {
+    --primary-color: #1A4480; /* Azul oscuro */
+    --accent-color: #DC143C;  /* Rojo */
+    --light-bg-color: #F0F0F0; /* Gris claro para fondos */
+    --white-color: #FFFFFF;    /* Blanco */
+    --text-color: #333333;    /* Color de texto general */
+    --heading-color: #222222; /* Color para títulos */
+}
+
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente legible */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white-color); /* Fondo principal blanco */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--primary-color); /* Color por defecto de los enlaces */
+}
+
+a:hover {
+    color: var(--accent-color); /* Cambia de color al pasar el mouse */
+}
+
+ul {
+    list-style: none; /* Quita los puntos de las listas */
+}
+
+/* --- Encabezado (Header) --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 0;
+    position: sticky; /* Sticky header para que se mantenga visible al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Alineación por defecto para el contenido si se envuelve */
+}
+
+.header-container {
+    max-width: 1200px; /* Ancho máximo para el header content */
+    margin: 0 auto;
+    display: flex; /* Convierte el contenedor en flexbox */
+    align-items: center; /* Alinea los ítems verticalmente al centro */
+    justify-content: center; /* Centra el logo y el bloque de contenido */
+    padding: 0 1.5rem; /* Padding horizontal para los bordes */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.header-logo {
+    max-width: 180px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 2rem; /* Espacio a la derecha del logo */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.header-main-content { /* Nuevo contenedor para título y nav */
+    flex-grow: 1; /* Permite que tome el espacio restante */
+    text-align: center; /* Centra el contenido dentro de este div */
+    max-width: calc(100% - 200px); /* Para evitar que crezca demasiado si el logo es grande (ajusta 200px si tu logo es mucho más grande o más pequeño) */
+}
+
+.miTexto {
+    font-size: 2.5em;
+    color: var(--white-color);
+    margin-bottom: 0.8rem; /* Espacio debajo del título */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Menú de Navegación */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex; /* Convierte la lista de navegación en flexbox */
+    justify-content: center; /* Centra los ítems del menú */
+    gap: 1.5rem; /* Espacio entre los elementos del menú */
+    list-style: none; /* Asegura que no haya marcadores de lista */
+    padding-left: 0; /* Elimina el padding por defecto de las listas */
+    flex-wrap: wrap; /* Permite que el menú se envuelva en pantallas pequeñas */
+}
+
+nav li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--white-color); /* Color de texto del menú */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    border-radius: 5px; /* Para que el hover se vea bien */
+    white-space: nowrap; /* Evita que los ítems del menú se rompan en varias líneas */
+    display: block; /* Hace que el enlace ocupe todo el espacio del padding para el click */
+}
+
+nav li a:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+
+/* --- Contenido Principal (Main) --- */
+main {
+    max-width: 1000px; /* Ancho máximo del contenido */
+    margin: 2rem auto; /* Centra el contenido y añade espacio superior/inferior */
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: var(--white-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+article {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--heading-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ol, ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--light-bg-color);
+    margin: 2rem 0;
+}
+
+/* --- Estilos Específicos para Contacto --- */
+.contacto-header { /* Clase para el h1 del contacto.html */
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: 2.5em;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none; /* Elimina el contorno azul al hacer focus */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Para que ocupe todo el ancho y se pueda centrar */
+    margin: 1.5rem auto 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #B2002B; /* Un rojo un poco más oscuro al pasar el mouse */
+}
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 2.5rem 0 1.5rem 0; /* Más padding arriba para las columnas */
+    margin-top: 3rem;
+}
+
+.footer-columns {
+    display: flex; /* Convierte el contenedor en flexbox */
+    justify-content: space-around; /* Distribuye el espacio entre las columnas */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo para el contenido del footer */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col {
+    flex: 1; /* Permite que cada columna ocupe el mismo espacio */
+    min-width: 250px; /* Ancho mínimo antes de que se envuelvan */
+    padding: 1rem;
+    text-align: left; /* Alinea el texto a la izquierda dentro de cada columna */
+}
+
+.footer-col h3 {
+    color: var(--accent-color); /* Títulos de columna en rojo */
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria sutil */
+    padding-bottom: 0.5rem;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Elimina el margen inferior por defecto de las listas */
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--white-color);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria para el copyright */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* --- Responsividad --- */
+@media (max-width: 992px) {
+    .header-container {
+        flex-direction: column; /* Apila el logo y el contenido en tablets */
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-logo {
+        margin: 0 0 1rem 0; /* Margen inferior cuando está apilado */
+    }
+
+    /* .header-content no existe en la nueva estructura, usar .header-main-content */
+    .header-main-content {
+        max-width: 100%; /* Permite que ocupe todo el ancho disponible */
+    }
+
+    nav ul {
+        justify-content: center; /* Centra los ítems del menú */
+        flex-wrap: wrap; /* Permite que el menú se envuelva en varias líneas si es necesario */
+        gap: 1rem;
+    }
+
+    nav li a { /* Ajuste para los enlaces de navegación */
+        padding: 0.5rem 0.8rem;
+        font-size: 1em;
+    }
+
+    .footer-columns {
+        flex-direction: column; /* Apila las columnas del footer */
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center; /* Centra el texto en columnas apiladas */
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador entre columnas */
+        padding-bottom: 1.5rem;
+        min-width: unset; /* Reinicia el ancho mínimo */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 400px; /* Limita el ancho en el centro */
+    }
+    .footer-col:last-child {
+        border-bottom: none; /* No hay separador en la última columna */
+    }
+}
+
+@media (max-width: 768px) {
+    .miTexto {
+        font-size: 2em;
+    }
+
+    header img {
+        max-width: 150px;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .contacto-header {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        max-width: 120px;
+    }
+
+    .miTexto {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column; /* Apila el menú en pantallas muy pequeñas */
+        gap: 0.5rem;
+    }
+    nav li a {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

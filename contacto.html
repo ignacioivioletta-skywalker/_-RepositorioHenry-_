@@ -2,34 +2,84 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SEND FAST</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 <body>
-    <header><h1>Este es el formulario de contacto</h1></header>
+    <header>
+        <div class="header-container">
+            <img src="Logo SEND FAST 1.png" alt="Logo de la empresa SEND FAST" class="header-logo"> 
+            <div class="header-main-content"> 
+                <h1 class="miTexto">SEND FAST</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./index.html#servicios-section">SERVICIOS</a></li>
+                        <li><a href="./contacto.html">ATENCION AL CLIENTE</a></li>
+                        <li><a href="./index.html#nuestra-empresa-section">NOSOTROS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main>
-    <form>
-        <div>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
-        </div>
+        <h1 class="contacto-header">Contáctanos</h1>
+        <form>
+            <div>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
 
-        <div>
-            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required><br><br>
-        </div>
+            <div>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            </div>
 
-        <div>
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required><br><br>
-        </div>
+            <div>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
 
-        <div>
-            <input type="number" id="telefono" name="telefono" placeholder="Telefono de contacto" required><br><br>
-        </div>
+            <div>
+                <input type="number" id="telefono" name="telefono" placeholder="Teléfono de contacto" required>
+            </div>
 
-        <div>
-            <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Mensaje" required></textarea><br><br>
-        </div>
+            <div>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Mensaje" required></textarea>
+            </div>
 
-        <button type="submit">Enviar</button>
-    </form>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="./contacto.html">Formulario de Contacto</a></li>
+                    <li><a href="mailto:info@sendfast.com">info@sendfast.com</a></li>
+                    <li><a href="tel:+549351XXXXXXXX">+54 9 351 XXXX-XXXX</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/">TikTok</a></li>
+                    <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Páginas de Interés</h3>
+                <ul>
+                    <li><a href="https://www.pagina1.com/">Página 1</a></li>
+                    <li><a href="https://www.pagina2.com/">Página 2</a></li>
+                    <li><a href="https://www.pagina3.com/">Página 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SEND FAST. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
