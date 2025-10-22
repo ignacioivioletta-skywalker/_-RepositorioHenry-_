@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Usuarios | Henry Security SAS</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="https://www.soyhenry.com/_next/static/media/HenryLogo.bb57fd6f.svg"
+          alt="Logo de Henry"
+          class="header-logo"
+        />
+
+        <nav class="header-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+              <a href="GenerarContrasena.html">Generar contraseña</a>
+            </li>
+            <li><a href="CajaFuerte.html">Caja Fuerte</a></li>
+            <li>
+              <a href="MonitoreoActividad.html">Monitoreo de actividad</a>
+            </li>
+            <li>
+              <a href="GestionUsuarios.html" class="active"
+                >Gestión de usuarios</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-generator-wrapper">
+      <div class="generator-box-container">
+        <h1 class="main-page-title">Asistente De Seguridad</h1>
+
+        <div class="hero-tag generator-tag">
+          <button
+            class="gestion-action-button"
+            style="
+              min-width: 200px;
+              background: var(--color-accent-yellow);
+              color: var(--color-primary-text);
+              font-weight: 700;
+            "
+          >
+            GESTIÓN DE PERFILES
+          </button>
+        </div>
+
+        <div class="gestion-form-card-container">
+          <form class="gestion-form" id="gestion-usuarios-form">
+            <div class="gestion-row">
+              <label for="ver-perfiles">Ver Perfiles</label>
+
+              <input
+                type="text"
+                id="ver-perfiles"
+                name="ver-perfiles"
+                placeholder="Título"
+              />
+
+              <button type="button" class="gestion-action-button">VER</button>
+            </div>
+
+            <div class="gestion-row">
+              <label for="ver-antiguedad">Ver Perfiles Por Antigüedad</label>
+
+              <input
+                type="text"
+                id="ver-antiguedad"
+                name="ver-antiguedad"
+                style="visibility: hidden"
+              />
+
+              <button type="button" class="gestion-action-button">VER</button>
+            </div>
+
+            <div class="gestion-row">
+              <label for="ver-administradores">Ver Administradores</label>
+
+              <input
+                type="text"
+                id="ver-administradores"
+                name="ver-administradores"
+                style="visibility: hidden"
+              />
+
+              <button type="button" class="gestion-action-button">VER</button>
+            </div>
+
+            <div
+              class="gestion-row modificar-acceso-title-row"
+              style="margin-top: 25px; margin-bottom: 5px"
+            >
+              <label style="min-width: 100%; margin-bottom: 5px"
+                >Modificar Acceso</label
+              >
+            </div>
+
+            <div
+              class="gestion-row modificar-acceso-row"
+              style="margin-bottom: 10px"
+            >
+              <label
+                for="mod-usuario"
+                class="mod-acceso-label"
+                style="min-width: auto; margin-right: 15px"
+                >Usuario</label
+              >
+
+              <input
+                type="text"
+                id="mod-usuario"
+                name="mod-usuario"
+                style="max-width: 250px; margin-right: 0"
+              />
+            </div>
+
+            <div
+              class="gestion-row modificar-acceso-row"
+              style="margin-bottom: 25px"
+            >
+              <label
+                for="mod-codigo"
+                class="mod-acceso-label"
+                style="min-width: auto; margin-right: 15px"
+                >Nuevo código de acceso</label
+              >
+
+              <input
+                type="text"
+                id="mod-codigo"
+                name="mod-codigo"
+                style="max-width: 250px; margin-right: 0"
+              />
+            </div>
+
+            <button type="button" class="gestion-action-button update-button">
+              ACTUALIZAR
+            </button>
+          </form>
+
+          <div class="user-list-display">
+            <p
+              style="
+                font-weight: 700;
+                margin-bottom: 15px;
+                color: var(--color-primary-text);
+              "
+            >
+              Usuario- Código - Nivel de autorización - Antigüedad
+            </p>
+
+            <p>Alice - 1234 - bajo - 12</p>
+            <p>Bob - 5678 - medio - 24</p>
+            <p>Charlie - 9101 - alto - 35</p>
+            <p>Diana - 1122 - admin - 48</p>
+            <p>Eve - 334 - bajo - 6</p>
+            <p>Frank - 5566 - medio - 12</p>
+            <p>Grace - 7788 - alto - 18</p>
+            <p>Hank - 9900 - admin - 30</p>
+            <p>Ivy - 1235 - bajo - 36</p>
+            <p>Jack - 5679 - medio - 48</p>
+            <p>Karen - 9102 - alto - 6</p>
+            <p>Leo - 1123 - admin - 24</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3>Contacto</h3>
+
+          <ul>
+            <li>
+              <a href="mailto:info@henry.com">info@henry.com</a>
+            </li>
+
+            <li>
+              <a href="tel:+549351XXXXXXXX">+54 9 351 XXXX-XXXX</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Redes Sociales</h3>
+
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/">Instagram</a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/">Facebook</a>
+            </li>
+
+            <li><a href="https://www.tiktok.com/">TikTok</a></li>
+
+            <li>
+              <a href="https://www.linkedin.com/">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 Henry. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

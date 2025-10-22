@@ -1,394 +1,720 @@
-/* --- Variables CSS para fácil mantenimiento --- */
-:root {
-    --primary-color: #1A4480; /* Azul oscuro */
-    --accent-color: #DC143C;  /* Rojo */
-    --light-bg-color: #F0F0F0; /* Gris claro para fondos */
-    --white-color: #FFFFFF;    /* Blanco */
-    --text-color: #333333;    /* Color de texto general */
-    --heading-color: #222222; /* Color para títulos */
-}
+/* Header */
 
-/* --- Estilos Generales --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+position: absolute;
+width: 1440px;
+height: 861px;
+left: 0px;
+top: 0px;
 
-body {
-    font-family: Arial, sans-serif; /* Fuente legible */
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--white-color); /* Fondo principal blanco */
-}
+/* Header */
 
-a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: var(--primary-color); /* Color por defecto de los enlaces */
-}
+position: absolute;
+width: 1166px;
+height: 590px;
+left: 128px;
+top: 197px;
 
-a:hover {
-    color: var(--accent-color); /* Cambia de color al pasar el mouse */
-}
+/* header content */
 
-ul {
-    list-style: none; /* Quita los puntos de las listas */
-}
+position: absolute;
+width: 608px;
+height: 406px;
+left: 128px;
+top: 197px;
 
-/* --- Encabezado (Header) --- */
-header {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 1rem 0;
-    position: sticky; /* Sticky header para que se mantenga visible al hacer scroll */
-    top: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Alineación por defecto para el contenido si se envuelve */
-}
+/* Protegemos tus datos, impulsamos tu confianza. */
 
-.header-container {
-    max-width: 1200px; /* Ancho máximo para el header content */
-    margin: 0 auto;
-    display: flex; /* Convierte el contenedor en flexbox */
-    align-items: center; /* Alinea los ítems verticalmente al centro */
-    justify-content: center; /* Centra el logo y el bloque de contenido */
-    padding: 0 1.5rem; /* Padding horizontal para los bordes */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-}
+position: absolute;
+width: 478px;
+height: 64px;
+left: 135px;
+top: 539px;
 
-.header-logo {
-    max-width: 180px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-right: 2rem; /* Espacio a la derecha del logo */
-    flex-shrink: 0; /* Evita que el logo se encoja */
-}
+font-family: "Satoshi";
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 32px;
+/* o 107% */
+letter-spacing: 0.005em;
 
-.header-main-content { /* Nuevo contenedor para título y nav */
-    flex-grow: 1; /* Permite que tome el espacio restante */
-    text-align: center; /* Centra el contenido dentro de este div */
-    max-width: calc(100% - 200px); /* Para evitar que crezca demasiado si el logo es grande (ajusta 200px si tu logo es mucho más grande o más pequeño) */
-}
+color: #676767;
 
-.miTexto {
-    font-size: 2.5em;
-    color: var(--white-color);
-    margin-bottom: 0.8rem; /* Espacio debajo del título */
-    text-align: center; /* Asegura que el texto esté centrado */
-}
+/* Rectangle 673 */
 
-/* Menú de Navegación */
-nav {
-    margin-top: 1rem;
-}
+position: absolute;
+width: 608px;
+height: 117px;
+left: 128px;
+top: 391px;
 
-nav ul {
-    display: flex; /* Convierte la lista de navegación en flexbox */
-    justify-content: center; /* Centra los ítems del menú */
-    gap: 1.5rem; /* Espacio entre los elementos del menú */
-    list-style: none; /* Asegura que no haya marcadores de lista */
-    padding-left: 0; /* Elimina el padding por defecto de las listas */
-    flex-wrap: wrap; /* Permite que el menú se envuelva en pantallas pequeñas */
-}
+background: #ffff00;
+border-radius: 418px;
 
-nav li a {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--white-color); /* Color de texto del menú */
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
-    border-radius: 5px; /* Para que el hover se vea bien */
-    white-space: nowrap; /* Evita que los ítems del menú se rompan en varias líneas */
-    display: block; /* Hace que el enlace ocupe todo el espacio del padding para el click */
-}
+/* Henry Security SAS */
 
-nav li a:hover {
-    background-color: var(--accent-color);
-    color: var(--white-color);
-}
+position: absolute;
+width: 578px;
+height: 218px;
+left: 135px;
+top: 283px;
 
+font-family: "Satoshi";
+font-style: normal;
+font-weight: 900;
+font-size: 90px;
+line-height: 87px;
+/* o 97% */
+letter-spacing: -0.01em;
 
-/* --- Contenido Principal (Main) --- */
-main {
-    max-width: 1000px; /* Ancho máximo del contenido */
-    margin: 2rem auto; /* Centra el contenido y añade espacio superior/inferior */
-    padding: 0 1.5rem;
-}
+color: #222222;
 
-section {
-    background-color: var(--white-color);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+/* More than Faster */
 
-article {
-    margin-bottom: 1.5rem;
-}
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
 
-h2 {
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-}
+/* Group */
 
-h3 {
-    font-size: 1.5em;
-    color: var(--heading-color);
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-}
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
 
-p {
-    margin-bottom: 1rem;
-}
+/* fill */
 
-ol, ul {
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-}
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
 
-li {
-    margin-bottom: 0.5rem;
-}
+background: #f1f1f1;
+border-radius: 23px;
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: var(--light-bg-color);
-    margin: 2rem 0;
-}
+/* Seguridad personalizada y efectiva */
 
-/* --- Estilos Específicos para Contacto --- */
-.contacto-header { /* Clase para el h1 del contacto.html */
-    text-align: center;
-    color: var(--primary-color);
-    margin-top: 2rem;
-    font-size: 2.5em;
-}
+position: absolute;
+width: 286px;
+height: 16px;
+left: 156px;
+top: 212px;
 
-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2.5rem;
-    background-color: var(--white-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+/* idéntico a la altura del cuadro o 100% */
+display: flex;
+align-items: center;
 
-form div {
-    margin-bottom: 1rem;
-}
+color: #222222;
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
+/* Escritorio edit_pared clean 1 */
 
-input:focus,
-textarea:focus {
-    border-color: var(--primary-color);
-    outline: none; /* Elimina el contorno azul al hacer focus */
-}
+position: absolute;
+width: 501.55px;
+height: 590px;
+left: 792.45px;
+top: 197px;
 
-textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-    min-height: 100px;
-}
+background: url(home-candado.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
 
-button[type="submit"] {
-    background-color: var(--accent-color);
-    color: var(--white-color);
-    padding: 0.9rem 1.8rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block; /* Para que ocupe todo el ancho y se pueda centrar */
-    margin: 1.5rem auto 0 auto;
-}
+/* Group 1000002475 */
 
-button[type="submit"]:hover {
-    background-color: #B2002B; /* Un rojo un poco más oscuro al pasar el mouse */
-}
+position: absolute;
+width: 1440px;
+height: 89px;
+left: 0px;
+top: 0px;
 
-/* --- Pie de Página (Footer) --- */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 2.5rem 0 1.5rem 0; /* Más padding arriba para las columnas */
-    margin-top: 3rem;
-}
+/* Rectangle 1390 */
 
-.footer-columns {
-    display: flex; /* Convierte el contenedor en flexbox */
-    justify-content: space-around; /* Distribuye el espacio entre las columnas */
-    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
-    max-width: 1200px; /* Ancho máximo para el contenido del footer */
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    margin-bottom: 2rem;
-}
+position: absolute;
+width: 1440px;
+height: 89px;
+left: 0px;
+top: 0px;
 
-.footer-col {
-    flex: 1; /* Permite que cada columna ocupe el mismo espacio */
-    min-width: 250px; /* Ancho mínimo antes de que se envuelvan */
-    padding: 1rem;
-    text-align: left; /* Alinea el texto a la izquierda dentro de cada columna */
-}
+background: #f1f1f1;
 
-.footer-col h3 {
-    color: var(--accent-color); /* Títulos de columna en rojo */
-    margin-bottom: 1rem;
-    font-size: 1.3em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria sutil */
-    padding-bottom: 0.5rem;
-}
+/* menu */
 
-footer ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0; /* Elimina el margen inferior por defecto de las listas */
-}
+position: absolute;
+width: 888px;
+height: 33px;
+left: 483px;
+top: 33px;
 
-footer ul li {
-    margin-bottom: 0.5rem;
-}
+/* Caja Fuerte */
 
-footer a {
-    color: var(--white-color);
-    transition: color 0.3s ease;
-}
+position: absolute;
+width: 93px;
+height: 24px;
+left: 821px;
+top: 37px;
 
-footer a:hover {
-    color: var(--accent-color);
-}
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria para el copyright */
-}
+color: #222222;
 
-.footer-bottom p {
-    margin: 0;
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.8);
-}
+/* Monitoreo de actividad */
 
+position: absolute;
+width: 187px;
+height: 24px;
+left: 969px;
+top: 37px;
 
-/* --- Responsividad --- */
-@media (max-width: 992px) {
-    .header-container {
-        flex-direction: column; /* Apila el logo y el contenido en tablets */
-        align-items: center;
-        text-align: center;
-    }
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
 
-    .header-logo {
-        margin: 0 0 1rem 0; /* Margen inferior cuando está apilado */
-    }
+color: #222222;
 
-    /* .header-content no existe en la nueva estructura, usar .header-main-content */
-    .header-main-content {
-        max-width: 100%; /* Permite que ocupe todo el ancho disponible */
-    }
+/* Gestión de usuarios */
 
-    nav ul {
-        justify-content: center; /* Centra los ítems del menú */
-        flex-wrap: wrap; /* Permite que el menú se envuelva en varias líneas si es necesario */
-        gap: 1rem;
-    }
+position: absolute;
+width: 160px;
+height: 24px;
+left: 1211px;
+top: 37px;
 
-    nav li a { /* Ajuste para los enlaces de navegación */
-        padding: 0.5rem 0.8rem;
-        font-size: 1em;
-    }
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
 
-    .footer-columns {
-        flex-direction: column; /* Apila las columnas del footer */
-        align-items: center;
-    }
+color: #222222;
 
-    .footer-col {
-        text-align: center; /* Centra el texto en columnas apiladas */
-        margin-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador entre columnas */
-        padding-bottom: 1.5rem;
-        min-width: unset; /* Reinicia el ancho mínimo */
-        width: 100%; /* Ocupa todo el ancho disponible */
-        max-width: 400px; /* Limita el ancho en el centro */
-    }
-    .footer-col:last-child {
-        border-bottom: none; /* No hay separador en la última columna */
-    }
-}
+/* Generar contraseña */
 
-@media (max-width: 768px) {
-    .miTexto {
-        font-size: 2em;
-    }
+position: absolute;
+width: 163px;
+height: 24px;
+left: 603px;
+top: 37px;
 
-    header img {
-        max-width: 150px;
-    }
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
 
-    main {
-        margin: 1rem auto;
-        padding: 0 1rem;
-    }
+color: #222222;
 
-    h2 {
-        font-size: 1.8em;
-    }
+/* Rectangle 674 */
 
-    h3 {
-        font-size: 1.3em;
-    }
+position: absolute;
+width: 81px;
+height: 33px;
+left: 483px;
+top: 33px;
 
-    form {
-        padding: 1.5rem;
-    }
+background: #222222;
+border-radius: 9px;
 
-    .contacto-header {
-        font-size: 2em;
-    }
-}
+/* Home */
 
-@media (max-width: 480px) {
-    .header-logo {
-        max-width: 120px;
-    }
+position: absolute;
+width: 49px;
+height: 24px;
+left: 499px;
+top: 37px;
 
-    .miTexto {
-        font-size: 1.8em;
-    }
+font-family: "Poppins";
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
 
-    h2 {
-        font-size: 1.5em;
-    }
+color: #ffffff;
 
-    h3 {
-        font-size: 1.2em;
-    }
+/* Group 48095749 */
 
-    nav ul {
-        flex-direction: column; /* Apila el menú en pantallas muy pequeñas */
-        gap: 0.5rem;
-    }
-    nav li a {
-        width: fit-content;
-        margin: 0 auto;
-    }
-}
+position: absolute;
+width: 144.78px;
+height: 27px;
+left: 65px;
+top: 36px;
+
+/* HEN-Logo */
+
+position: absolute;
+width: 144.78px;
+height: 27px;
+left: calc(50% - 144.78px / 2 - 582.61px);
+top: 36px;
+
+/* H */
+
+position: absolute;
+left: 0%;
+right: 82.67%;
+top: 0%;
+bottom: 0.02%;
+
+/* Vector */
+
+position: absolute;
+left: 10.7%;
+right: 82.67%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 93.35%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* E */
+
+position: absolute;
+left: 22.95%;
+right: 63.38%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* N */
+
+position: absolute;
+left: 41.5%;
+right: 41.38%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* R */
+
+position: absolute;
+left: 64.27%;
+right: 19.1%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* Y */
+
+position: absolute;
+left: 82.13%;
+right: 0%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* curva */
+
+position: absolute;
+left: 0%;
+right: 30.4%;
+top: 29.84%;
+bottom: 11.44%;
+
+/* HEN_YELLOW */
+background: #ffff00;
+
+/* nave */
+
+position: absolute;
+left: 69.5%;
+right: 25.55%;
+top: 20.76%;
+bottom: 56.94%;
+
+background: #fafafa;
+/* Header */
+
+position: absolute;
+width: 1440px;
+height: 861px;
+left: 0px;
+top: 0px;
+
+/* Header */
+
+position: absolute;
+width: 1166px;
+height: 590px;
+left: 128px;
+top: 197px;
+
+/* header content */
+
+position: absolute;
+width: 608px;
+height: 406px;
+left: 128px;
+top: 197px;
+
+/* Protegemos tus datos, impulsamos tu confianza. */
+
+position: absolute;
+width: 478px;
+height: 64px;
+left: 135px;
+top: 539px;
+
+font-family: "Satoshi";
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 32px;
+/* o 107% */
+letter-spacing: 0.005em;
+
+color: #676767;
+
+/* Rectangle 673 */
+
+position: absolute;
+width: 608px;
+height: 117px;
+left: 128px;
+top: 391px;
+
+background: #ffff00;
+border-radius: 418px;
+
+/* Henry Security SAS */
+
+position: absolute;
+width: 578px;
+height: 218px;
+left: 135px;
+top: 283px;
+
+font-family: "Satoshi";
+font-style: normal;
+font-weight: 900;
+font-size: 90px;
+line-height: 87px;
+/* o 97% */
+letter-spacing: -0.01em;
+
+color: #222222;
+
+/* More than Faster */
+
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
+
+/* Group */
+
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
+
+/* fill */
+
+position: absolute;
+width: 324px;
+height: 46px;
+left: 135px;
+top: 197px;
+
+background: #f1f1f1;
+border-radius: 23px;
+
+/* Seguridad personalizada y efectiva */
+
+position: absolute;
+width: 286px;
+height: 16px;
+left: 156px;
+top: 212px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+/* idéntico a la altura del cuadro o 100% */
+display: flex;
+align-items: center;
+
+color: #222222;
+
+/* Escritorio edit_pared clean 1 */
+
+position: absolute;
+width: 501.55px;
+height: 590px;
+left: 792.45px;
+top: 197px;
+
+background: url(home-candado.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+
+/* Group 1000002475 */
+
+position: absolute;
+width: 1440px;
+height: 89px;
+left: 0px;
+top: 0px;
+
+/* Rectangle 1390 */
+
+position: absolute;
+width: 1440px;
+height: 89px;
+left: 0px;
+top: 0px;
+
+background: #f1f1f1;
+
+/* menu */
+
+position: absolute;
+width: 888px;
+height: 33px;
+left: 483px;
+top: 33px;
+
+/* Caja Fuerte */
+
+position: absolute;
+width: 93px;
+height: 24px;
+left: 821px;
+top: 37px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
+
+color: #222222;
+
+/* Monitoreo de actividad */
+
+position: absolute;
+width: 187px;
+height: 24px;
+left: 969px;
+top: 37px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
+
+color: #222222;
+
+/* Gestión de usuarios */
+
+position: absolute;
+width: 160px;
+height: 24px;
+left: 1211px;
+top: 37px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
+
+color: #222222;
+
+/* Generar contraseña */
+
+position: absolute;
+width: 163px;
+height: 24px;
+left: 603px;
+top: 37px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
+
+color: #222222;
+
+/* Rectangle 674 */
+
+position: absolute;
+width: 81px;
+height: 33px;
+left: 483px;
+top: 33px;
+
+background: #222222;
+border-radius: 9px;
+
+/* Home */
+
+position: absolute;
+width: 49px;
+height: 24px;
+left: 499px;
+top: 37px;
+
+font-family: "Poppins";
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* idéntico a la altura del cuadro */
+text-align: center;
+
+color: #ffffff;
+
+/* Group 48095749 */
+
+position: absolute;
+width: 144.78px;
+height: 27px;
+left: 65px;
+top: 36px;
+
+/* HEN-Logo */
+
+position: absolute;
+width: 144.78px;
+height: 27px;
+left: calc(50% - 144.78px / 2 - 582.61px);
+top: 36px;
+
+/* H */
+
+position: absolute;
+left: 0%;
+right: 82.67%;
+top: 0%;
+bottom: 0.02%;
+
+/* Vector */
+
+position: absolute;
+left: 10.7%;
+right: 82.67%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 93.35%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* E */
+
+position: absolute;
+left: 22.95%;
+right: 63.38%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* N */
+
+position: absolute;
+left: 41.5%;
+right: 41.38%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* R */
+
+position: absolute;
+left: 64.27%;
+right: 19.1%;
+top: 0%;
+bottom: 0%;
+
+background: #000000;
+
+/* Y */
+
+position: absolute;
+left: 82.13%;
+right: 0%;
+top: 0%;
+bottom: 0.02%;
+
+background: #000000;
+
+/* curva */
+
+position: absolute;
+left: 0%;
+right: 30.4%;
+top: 29.84%;
+bottom: 11.44%;
+
+/* HEN_YELLOW */
+background: #ffff00;
+
+/* nave */
+
+position: absolute;
+left: 69.5%;
+right: 25.55%;
+top: 20.76%;
+bottom: 56.94%;
+
+background: #fafafa;

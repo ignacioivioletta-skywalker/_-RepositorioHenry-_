@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoreo de Actividad | Henry Security SAS</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="https://www.soyhenry.com/_next/static/media/HenryLogo.bb57fd6f.svg"
+          alt="Logo de Henry"
+          class="header-logo"
+        />
+        <nav class="header-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+              <a href="GenerarContrasena.html">Generar contraseña</a>
+            </li>
+            <li><a href="CajaFuerte.html">Caja Fuerte</a></li>
+            <li>
+              <a href="MonitoreoActividad.html" class="active"
+                >Monitoreo de actividad</a
+              >
+            </li>
+            <li><a href="GestionUsuarios.html">Gestión de usuarios</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-generator-wrapper">
+      <div class="generator-box-container">
+        <h1 class="main-page-title">Asistente De Seguridad</h1>
+
+        <div class="hero-tag generator-tag">
+          <h3>
+            <span class="highlight-yellow-full"
+              >SISTEMA DE MONITOREO DE ACTIVIDAD SOSPECHOSA</span
+            >
+          </h3>
+        </div>
+
+        <div class="form-card-container">
+          <form class="monitoring-form">
+            <div class="activity-row">
+              <label for="descripcion-actividad">Descripción</label>
+              <input
+                type="text"
+                id="descripcion-actividad"
+                name="descripcion-actividad"
+                placeholder="Descripción de la actividad"
+              />
+
+              <label for="nivel-riesgo">Nivel de riesgo</label>
+              <input
+                type="text"
+                id="nivel-riesgo"
+                name="nivel-riesgo"
+                placeholder="bajo, medio, alto"
+              />
+
+              <button
+                type="button"
+                id="agregar-actividad-btn"
+                class="action-button"
+              >
+                AGREGAR ACTIVIDAD
+              </button>
+            </div>
+
+            <div class="activity-row">
+              <label for="eliminar-id">Eliminar una actividad sospechosa</label>
+              <input
+                type="text"
+                id="eliminar-id"
+                name="eliminar-id"
+                placeholder="Id de la actividad"
+              />
+
+              <button
+                type="button"
+                id="eliminar-actividad-btn"
+                class="action-button"
+              >
+                ELIMINAR ACTIVIDAD
+              </button>
+            </div>
+
+            <div class="activity-row">
+              <label for="filtro-riesgo"
+                >Filtra actividades por nivel de riesgo</label
+              >
+              <input
+                type="text"
+                id="filtro-riesgo"
+                name="filtro-riesgo"
+                placeholder="bajo, medio, alto"
+              />
+
+              <button
+                type="button"
+                id="mostrar-actividades-btn"
+                class="action-button"
+              >
+                MOSTRAR ACTIVIDADES
+              </button>
+            </div>
+
+            <div class="activity-row">
+              <label for="nombre-reporte">Reporte de actividades</label>
+              <input
+                type="text"
+                id="nombre-reporte"
+                name="nombre-reporte"
+                placeholder="Nombre del archivo"
+              />
+
+              <button
+                type="button"
+                id="generar-reporte-btn"
+                class="action-button"
+              >
+                GENERAR REPORTE
+              </button>
+            </div>
+
+            <div id="actividades-listado" class="activity-list-display">
+              <p>Id: 0 Descripción: asdf, Riesgo - medio</p>
+              <p>Id: 1 Descripción: asdf, Riesgo - medio</p>
+              <p>Id: 2 Descripción: asdf, Riesgo - medio</p>
+              <p>Id: 3 Descripción: asdf, Riesgo - alto</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:info@henry.com">info@henry.com</a></li>
+            <li><a href="tel:+549351XXXXXXXX">+54 9 351 XXXX-XXXX</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Redes Sociales</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Henry. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

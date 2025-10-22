@@ -1,0 +1,1045 @@
+/* ========================================================================= */
+/* 1. Variables Globales y Reseteo Base */
+/* ========================================================================= */
+:root {
+  /* Colores */
+  --color-primary-text: #222222;
+  --color-secondary-text: #676767;
+  --color-header-bg: #f4f4f4; /* Fondo del header (gris claro) */
+  --color-accent-yellow: #ffff00; /* Fondo del highlight */
+  --color-menu-active-bg: #222222;
+  --color-menu-active-text: #ffffff;
+  --color-footer-bg: #1c1c1c;
+  --color-footer-text: #ecf0f1;
+  --color-box-shadow: rgba(0, 0, 0, 0.25);
+  --color-light-gray-bg: #fafafa; /* Tono gris claro (solo como referencia) */
+  --color-input-label: #a5a4a4; /* Nuevo color: #A5A4A4 */
+
+  /* Tipografía */
+  --font-poppins: "Poppins", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif; /* Simulación de la fuente moderna */
+  --max-page-width: 1440px;
+}
+
+/* Reseteo y estilos base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-poppins);
+  color: var(--color-primary-text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* Degradado vertical que va del color del header al blanco */
+  background: linear-gradient(
+    to bottom,
+    var(--color-header-bg) 0px,
+    var(--color-header-bg) 89px,
+    #ffffff 100%
+  );
+  background-attachment: fixed; /* Asegura que el degradado cubra todo el scroll */
+}
+
+/* ========================================================================= */
+/* 2. Estilos del Encabezado (Header) */
+/* ========================================================================= */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 89px;
+  background: var(--color-header-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 65px;
+}
+
+.header-logo {
+  height: 27px;
+  width: auto;
+  transform: translateX(-15px);
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: var(--color-primary-text);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 14px;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Estilo para el ítem activo/hover */
+.header-nav ul li a.active,
+.header-nav ul li a:hover {
+  background: var(--color-menu-active-bg);
+  color: var(--color-menu-active-text);
+  font-weight: 600;
+}
+
+/* ========================================================================= */
+/* 3. Estilos de la Sección Hero (Home Page Content) */
+/* ========================================================================= */
+.hero-section-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.main-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 0 65px;
+  min-height: 80vh;
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 600px;
+  padding-right: 40px;
+}
+
+/* --- Elementos de Texto (Home Page) --- */
+
+.hero-tag {
+  background: var(--color-header-bg);
+  border-radius: 23px;
+  padding: 15px 20px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.hero-tag h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-primary-text);
+}
+
+.hero-title {
+  margin-bottom: 30px;
+}
+
+.hero-title h1 {
+  font-family: var(--font-satoshi);
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 87px;
+  letter-spacing: -0.01em;
+  color: var(--color-primary-text);
+}
+
+.hero-title .highlight-yellow {
+  background-color: var(--color-accent-yellow);
+  border-radius: 418px;
+  padding: 0 15px;
+  display: inline-block;
+  transform: translateY(-5px);
+  line-height: 1.1;
+}
+
+.main-text-container h2 {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  color: var(--color-secondary-text);
+  width: 100%;
+}
+
+/* --- Imagen Hero (Home Page) --- */
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 590px;
+  padding-left: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.2));
+  border-radius: 20px;
+}
+
+/* ========================================================================= */
+/* 4. Estilos del Pie de Página (Footer) */
+/* ========================================================================= */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: 40px 65px 20px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: var(--color-accent-yellow);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--color-footer-text);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--color-accent-yellow);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+/* ========================================================================= */
+/* 5. Estilos Específicos para Generador/Caja/Monitoreo */
+/* ========================================================================= */
+
+.content-generator-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  /* Alineación más arriba para reducir espacio en blanco */
+  align-items: flex-start;
+  width: 100%;
+  /* Reducción del padding superior para menos espacio en blanco */
+  padding: 40px 20px 80px;
+}
+
+.generator-box-container {
+  background: none;
+  width: 100%;
+  max-width: 978px;
+  border-radius: 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+}
+
+/* Título: "Asistente De Seguridad" */
+.main-page-title {
+  font-family: var(--font-satoshi);
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-primary-text);
+  /* Reducción del margen superior (antes 50px) */
+  margin-top: 0;
+  margin-bottom: 30px;
+  width: 627px;
+  max-width: 100%;
+}
+
+/* Tag: "CAJA FUERTE" / "Generador de contraseñas" / "SISTEMA DE MONITOREO..." */
+.generator-tag {
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  border-radius: 23px;
+  background: none;
+  width: fit-content;
+}
+
+.generator-tag h3 {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-primary-text);
+}
+
+/* Fondo amarillo completo en el span (Generador de contraseñas / Caja Fuerte) */
+.highlight-yellow-full {
+  background-color: var(--color-accent-yellow);
+  border-radius: 23px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+/* Contenedor de la tarjeta del formulario (fondo blanco) */
+.form-card-container {
+  background: #ffffff;
+  border-radius: 12px;
+  /* Reducción de padding para ajustar la caja */
+  padding: 40px 30px 50px;
+  width: 100%;
+  /* AJUSTE CLAVE: Reducción del ancho máximo para que la caja parezca ajustada al contenido */
+  max-width: 580px; /* Base para CajaFuerte y Generador */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+/* ------------------------------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA GENERARCONTRASEÑA (Por defecto) */
+/* ------------------------------------------------------------- */
+
+.password-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--color-secondary-text);
+  white-space: nowrap;
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"] {
+  box-sizing: border-box;
+  width: 70px;
+  height: 35px;
+  background: #fafafa;
+  border: 0.25px solid #a3a3a3;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #fafafa;
+  border: 0.25px solid #a3a3a3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.form-group input[type="checkbox"]:checked {
+  background: var(--color-accent-yellow);
+  border-color: var(--color-accent-yellow);
+}
+
+/* Botón de Generar Contraseña */
+.generate-button {
+  width: 243.86px;
+  height: 50px;
+  background: var(--color-primary-text);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+
+  font-family: var(--font-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-menu-active-text);
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+}
+
+.generate-button:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA CAJAFUERTE.HTML */
+/* ------------------------------------------------------------- */
+
+/* Contenedor de Fila: CLAVE para alinear los elementos horizontalmente (Código, Intentos, Botón) */
+.form-row-group {
+  display: flex;
+  /* AJUSTE CLAVE: Usamos 'space-between' o 'space-around' pero ajustamos los anchos de los campos */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 25px;
+  /* Se podría usar gap: 20px; y ajustar justify-content: center; pero space-between funciona bien con los min-width */
+}
+
+/* Contenedor de un solo campo y etiqueta (Código y Cantidad de Intentos) */
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  /* AJUSTE CLAVE: Damos un ancho fijo para controlar la distribución como en la imagen */
+  width: 40%;
+  min-width: 200px; /* Ancho mínimo para que no se pegue en pantallas pequeñas */
+}
+
+.form-group-inline label {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--color-secondary-text);
+  margin-right: 15px;
+  min-width: 100px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Estilo para los inputs de Caja Fuerte */
+.form-row-group input[type="password"],
+.form-row-group input[type="number"] {
+  box-sizing: border-box;
+  width: 100%; /* Ocupa el resto del espacio en el form-group-inline */
+  max-width: 150px;
+  height: 35px;
+  background: #fafafa;
+  border: 0.25px solid #a3a3a3;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: left; /* Se ve mejor a la izquierda para el código secreto */
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+/* Estilo para el botón GUARDAR */
+.save-button {
+  width: 155px;
+  height: 50px;
+  background: var(--color-primary-text);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  font-family: var(--font-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-menu-active-text);
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+  margin-top: 0;
+}
+
+.save-button:hover {
+  opacity: 0.9;
+}
+
+/* Separador: Se elimina según el diseño de la imagen, que no lo muestra */
+.form-divider {
+  display: none;
+}
+
+/* SEGUNDO RENGLÓN: Validar Código Secreto (Centrado) */
+.centered-validation-group {
+  /* AJUSTE CLAVE: Cambiamos a 'center' para centrar el grupo completo */
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 25px; /* Separación con los botones */
+}
+.centered-validation-group .form-group-inline {
+  justify-content: center;
+  margin: 0;
+  /* Damos ancho fijo para que el campo Validar Código Secreto esté centrado, pero sin el botón GUARDAR */
+  width: auto;
+}
+.centered-validation-group input[type="password"] {
+  width: 150px;
+}
+
+/* TERCER RENGLÓN: Botones VALIDAR CÓDIGO y RESET */
+.buttons-row {
+  /* AJUSTE CLAVE: Centramos el grupo de botones */
+  max-width: 450px;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5px; /* Un pequeño ajuste para pegarlo al campo de validación */
+}
+
+.validate-button,
+.reset-button {
+  height: 50px;
+  background: var(--color-primary-text);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-menu-active-text);
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+}
+
+.validate-button {
+  width: 243.86px;
+}
+
+.reset-button {
+  width: 143px;
+  /* El color se mantiene igual que los demás botones */
+  background: var(--color-primary-text);
+}
+
+.validate-button:hover,
+.reset-button:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA MONITOREOACTIVIDAD.HTML */
+/* ------------------------------------------------------------- */
+.form-card-container {
+  /* Sobreescribimos el max-width para la página de monitoreo */
+  max-width: 900px;
+}
+
+.monitoring-form {
+  width: 100%;
+  /* AJUSTE CLAVE: Ancho máximo del formulario para que los elementos se centren */
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 10px; /* Espacio entre elementos */
+}
+
+.activity-row label {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--color-secondary-text);
+  /* Permite que la etiqueta ocupe el espacio mínimo necesario */
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+/* Estilos de los inputs para Monitoreo */
+.activity-row input[type="text"] {
+  box-sizing: border-box;
+  /* Ajusta el ancho para que los inputs ocupen el espacio restante */
+  flex-grow: 1;
+  height: 35px;
+  background: #fafafa;
+  border: 0.25px solid #a3a3a3;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-right: 15px;
+}
+
+/* Ajuste específico para las filas con dos inputs (Agregar actividad) */
+.activity-row:nth-child(1) input[type="text"] {
+  max-width: 180px; /* Limita un poco el ancho de los inputs de descripción y riesgo */
+  flex-grow: 0;
+}
+.activity-row:nth-child(1) label:nth-of-type(1) {
+  min-width: 80px; /* Ancho fijo para 'Descripción' */
+}
+.activity-row:nth-child(1) label:nth-of-type(2) {
+  min-width: 100px; /* Ancho fijo para 'Nivel de riesgo' */
+}
+
+/* Estilo de los botones de acción */
+.action-button {
+  height: 50px;
+  background: var(--color-primary-text);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 170px;
+
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 16px; /* Tamaño de fuente ligeramente menor */
+  color: var(--color-menu-active-text);
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+/* Área de resultados/listado */
+.activity-list-display {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.activity-list-display p {
+  font-size: 14px;
+  color: var(--color-primary-text);
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* ------------------------------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA GESTIÓN DE USUARIOS (NUEVO) */
+/* ------------------------------------------------------------- */
+
+/* Adaptar el contenedor de la tarjeta a la página de Gestión de Usuarios */
+.gestion-form-card-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px 50px;
+  width: 100%;
+  max-width: 750px; /* Ancho similar al de monitoreo para más campos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+.gestion-form {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fila genérica para elementos en Gestión de Usuarios */
+.gestion-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.gestion-row label {
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--color-secondary-text);
+  white-space: nowrap;
+  margin-right: 15px;
+  min-width: 150px; /* Ancho de etiqueta fijo */
+  text-align: left;
+}
+
+.gestion-row input[type="text"],
+.gestion-row input[type="number"] {
+  box-sizing: border-box;
+  flex-grow: 1;
+  max-width: 180px;
+  height: 35px;
+  background: #fafafa;
+  border: 0.25px solid #a3a3a3;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-right: 15px;
+}
+
+/* Botones genéricos de acción para Gestión de Usuarios (VER / ACTUALIZAR) */
+.gestion-action-button {
+  height: 50px;
+  background: var(--color-primary-text);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 80px;
+
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-menu-active-text);
+  text-align: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s;
+}
+
+.gestion-action-button:hover {
+  opacity: 0.9;
+}
+
+/* ESTILOS DE ETIQUETAS Y CENTRADO DE MODIFICAR ACCESO */
+
+/* Estilo para las etiquetas 'Usuario' y 'Nuevo código de acceso' */
+.mod-acceso-label {
+  /* Aplicar color y reducir tamaño de fuente como se solicitó */
+  color: var(--color-input-label) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+/* Fila que contiene el título "Modificar Acceso" */
+.modificar-acceso-title-row {
+  display: flex;
+  justify-content: center; /* Centrar el contenido de la fila */
+  width: 100%;
+}
+
+.modificar-acceso-title-row label {
+  text-align: center !important; /* Asegurar que el texto esté centrado */
+}
+
+/* Fila para "Usuario" y "Nuevo código de acceso" */
+.modificar-acceso-row {
+  display: flex;
+  justify-content: center; /* Centrar los campos de input */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Ajuste específico para el botón ACTUALIZAR */
+.update-button {
+  min-width: 180px;
+  margin-top: 20px;
+}
+
+/* Área de resultados de Gestión de Usuarios */
+.user-list-display {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  /* AJUSTE CLAVE: Asegurar que el contenedor del listado se centre */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-list-display p {
+  font-size: 14px;
+  color: var(--color-primary-text);
+  margin-bottom: 5px;
+  /* AJUSTE CLAVE: Centrar el texto del listado */
+  text-align: center;
+}
+
+/* ========================================================================= */
+/* 6. Media Queries (Ajuste para Responsividad) */
+/* ========================================================================= */
+
+@media (max-width: 1024px) {
+  /* Media queries para la página principal (index.html) */
+  .main-content-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .main-text-container {
+    width: 100%;
+    max-width: none;
+    padding-right: 0;
+    text-align: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .hero-tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-title h1 {
+    font-size: 60px;
+  }
+
+  .hero-image-container {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 40px;
+    order: 1;
+    padding-left: 0;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .hero-title h1 {
+    font-size: 40px;
+  }
+
+  .main-text-container h2 {
+    font-size: 20px;
+  }
+
+  .hero-tag {
+    padding: 10px 15px;
+  }
+
+  /* Reajustes para móviles del Generador de Contraseñas y Caja Fuerte */
+
+  .generator-box-container {
+    padding: 20px;
+  }
+
+  .main-page-title {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .form-card-container,
+  .gestion-form-card-container {
+    /* Ajustamos el padding para móvil */
+    padding: 30px 15px 40px;
+    max-width: 90%;
+  }
+
+  /* Formulario Generar Contraseña */
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="number"],
+  .form-group input[type="checkbox"] {
+    align-self: flex-end;
+  }
+
+  /* Formulario Caja Fuerte */
+  .form-row-group {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .form-group-inline label {
+    margin-bottom: 5px;
+  }
+
+  .form-row-group input[type="password"],
+  .form-row-group input[type="number"] {
+    width: 100%;
+    align-self: flex-end;
+  }
+
+  .centered-validation-group .form-group-inline {
+    align-items: flex-start;
+  }
+
+  .buttons-row {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .validate-button,
+  .reset-button,
+  .save-button {
+    width: 50%;
+    font-size: 16px;
+  }
+
+  .save-button {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 15px; /* Separación extra en móvil */
+  }
+
+  .content-generator-wrapper {
+    padding-bottom: 40px;
+  }
+
+  /* Formulario Monitoreo de Actividad (Móvil) */
+  .monitoring-form {
+    max-width: 100%;
+  }
+  .activity-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px; /* Más espacio en móvil */
+    gap: 5px;
+  }
+
+  .activity-row label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .activity-row input[type="text"] {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .activity-row:nth-child(1) input[type="text"] {
+    /* Desactivar el max-width fijo en móvil */
+    max-width: none;
+    flex-grow: 1;
+  }
+
+  .action-button {
+    width: 100%;
+    min-width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .activity-list-display {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* Formulario Gestión de Usuarios (Móvil) */
+  .gestion-form {
+    max-width: 100%;
+  }
+
+  .gestion-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .gestion-row label {
+    margin-bottom: 5px;
+  }
+
+  .gestion-row input[type="text"],
+  .gestion-row input[type="number"] {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  /* Fila de título y campos de Modificar Acceso */
+  .modificar-acceso-title-row,
+  .modificar-acceso-row {
+    justify-content: flex-start; /* Se alinea a la izquierda en móvil */
+  }
+
+  .gestion-action-button {
+    width: 100%;
+    min-width: 100%;
+    margin-top: 10px;
+  }
+
+  .update-button {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .user-list-display {
+    max-width: 100%;
+  }
+}
